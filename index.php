@@ -24,25 +24,25 @@ if ($actionName == "selectPost") {
 	echo json_encode($resultData);
 }
 
-if ($actionName == "insertPost") {
+// if ($actionName == "insertPost") {
 
-	$postName = isset($_POST["postName"]) ? $_POST["postName"] : '';
-	$postDesc = isset($_POST["postDesc"]) ? $_POST["postDesc"] : '';
+// 	$postName = isset($_POST["postName"]) ? $_POST["postName"] : '';
+// 	$postDesc = isset($_POST["postDesc"]) ? $_POST["postDesc"] : '';
 
-	$query = "INSERT INTO post(post_title, post_desc, status) VALUES('$postName', '$postDesc', 0)";
-	$result = mysqli_query($conn, $query);
+// 	$query = "INSERT INTO post(post_title, post_desc, status) VALUES('$postName', '$postDesc', 0)";
+// 	$result = mysqli_query($conn, $query);
 
-	if (!empty($postName) && !empty($postDesc)) {
-		if ($result) {
-			$resultData = array('status' => true, 'message' => 'New Post Inserted SUccessfully...');
-		} else {
-			$resultData = array('status' => false, 'message' => 'Cannot new Post Insert ...');
-		}
-	} else {
-		$resultData = array('status' => false, 'message' => 'Please enter post details ...');
-	}
+// 	if (!empty($postName) && !empty($postDesc)) {
+// 		if ($result) {
+// 			$resultData = array('status' => true, 'message' => 'New Post Inserted SUccessfully...');
+// 		} else {
+// 			$resultData = array('status' => false, 'message' => 'Cannot new Post Insert ...');
+// 		}
+// 	} else {
+// 		$resultData = array('status' => false, 'message' => 'Please enter post details ...');
+// 	}
 
-	echo json_encode($resultData);
-}
+// 	echo json_encode($resultData);
+// }
 
  ?>
